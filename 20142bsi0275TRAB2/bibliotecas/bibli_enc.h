@@ -27,7 +27,7 @@ typedef struct noc{
 
 node *caminha(list *lista, int pos);
 int* acha_cadeia(list *lista, int de, int *guarda);
-void append_item (list *lista, int numero);
+void append_item(list *lista, int numero);
 void imprime_lista(list *lista);
 node *caminha(list *lista, int pos);
 void troca(list *lista,node *nk, node *nv);
@@ -50,6 +50,13 @@ int acha_kaesimo(list *lista,int k);
 void appini_item (list *lista, int numero);
 void separa_par_impar(list *lista,list *par,list *impar);
 void move_node(list *lista, int pos, int pos2);
+
+/*----conjuntos-------*/
+void conjunto_intersec(list *lisa,list *lisb,list *lisr);
+void conjunto_uniao(list *lisa,list *lisb,list *lisr);
+int conjunto_pertence(list *lista, int num);
+void conjunto_diferenca(list *lisa,list *lisb,list *lisr);
+
 /*-------funções-char--------*/	
 void append_item_c (listc *lista, char letra);
 void imprime_lista_c(listc *lista);

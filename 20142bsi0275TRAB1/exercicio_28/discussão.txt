@@ -1,0 +1,8 @@
+Vetores.
+vantagens:
+	1- Usa menos memória.
+	2- implementação simples.
+	3- chega a uma posição com um comando ex: vetor[5].
+desvantagens:
+	1- se remover um item o espaço fica alocado porem em branco.
+	2- precisa de memória contigua.

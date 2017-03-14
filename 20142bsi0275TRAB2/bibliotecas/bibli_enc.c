@@ -5,7 +5,7 @@
 
 
 
-void append_item (list *lista, int numero){
+void append_item(list *lista, int numero){
 	node *item, *rastro;
 	item = malloc(1*sizeof(node));
 	rastro = lista->inicio;
@@ -460,3 +460,52 @@ void inversor_c(listc *lista){
 	i++;
 	}
 }
+void conjunto_intersec(list *lisa,list *lisb,list *lisr){
+	node *arastro;
+	
+	for(arastro=lisa->inicio; arastro != NULL; arastro= arastro->proximo){
+		if(busca_true(lisb, arastro->caixa)){
+			append_item(lisr, arastro->caixa);
+		}
+	}	
+	}
+void conjunto_uniao(list *lisa,list *lisb,list *lisr){
+	node *arastro;
+	
+	for(arastro = lisa->inicio; arastro != NULL; arastro= arastro->proximo){
+			append_item(lisr, arastro->caixa);
+			}
+	for(arastro=lisb->inicio; arastro != NULL; arastro= arastro->proximo){
+		if(busca_true(lisr, arastro->caixa) == 0){
+			append_item(lisr, arastro->caixa);
+		}
+	}	
+	}
+int conjunto_pertence(list *lista, int num){
+	int i=0 ;
+	node *nk;
+	nk = lista->inicio;
+	while (i < lista->tamanho){
+		if (nk->caixa == num){
+			return 1;
+			}
+		nk= nk->proximo;
+		i++;
+	}
+	
+	return 0;
+	}
+void conjunto_diferenca(list *lisa,list *lisb,list *lisr){
+	node *arastro;
+	
+	for(arastro=lisa->inicio; arastro != NULL; arastro= arastro->proximo){
+		if(conjunto_pertence(lisb, arastro->caixa) == 0){
+			append_item(lisr, arastro->caixa);
+		}
+	}	
+	for(arastro=lisb->inicio; arastro != NULL; arastro= arastro->proximo){
+		if(conjunto_pertence(lisa, arastro->caixa) == 0){
+			append_item(lisr, arastro->caixa);
+		}
+	}	
+	}

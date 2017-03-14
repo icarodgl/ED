@@ -32,4 +32,5 @@ void inversor(list *lista);
 node *caminha(list *lista, int pos);
 int insere_ret (list *lista, int k, int v);
 int excluir_pos(list *lista, int k);
+int excluir_chave(list *lista, int k);
 #endif

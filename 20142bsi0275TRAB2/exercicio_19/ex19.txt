@@ -1,0 +1,8 @@
+19
+A- Só é possível obter a 1º seqüência 325641, A 2º seqüência 154623 não é possível, pois não tem como retirar primeiro o número 2 e depois o número 3 porque o ultimo elemento inserido é o primeiro a sair.
+
+B- IIIRRIIRIRRR;
+
+C- 
+
+D-

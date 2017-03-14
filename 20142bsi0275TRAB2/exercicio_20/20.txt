@@ -1,0 +1,1 @@
+20) R: o problema desta implementação é que o tamanho de uma lista interfere no tamanho da outra, por ser implementada de tamanho fixo ambas em 1 array.Também não se sabe até onde faz parte da pilha 1 ou pilha 2.

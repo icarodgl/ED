@@ -382,3 +382,31 @@ int excluir_pos(list *lista, int k){
 		}
 	return 0;
 	}
+int excluir_chave(list *lista, int k){
+	node *nk;
+
+	nk = busca_pos(lista,k);
+	if(nk == NULL){return -1;}
+	if (nk->anterior != NULL && nk->proximo != NULL){
+		nk->anterior->proximo = nk->proximo;
+		nk->proximo->anterior = nk->anterior;
+		lista->tamanho--;
+		free(nk);
+		return 0;
+	}
+	if (nk->anterior == NULL){
+		nk->proximo->anterior = NULL;
+		lista->inicio = nk->proximo;
+		lista->tamanho--;
+		free(nk);
+		return 0;
+		}
+	if (nk->proximo == NULL){
+		lista->fim = nk->anterior;
+		nk->anterior->proximo = nk->proximo;
+		lista->tamanho--;
+		free(nk);
+		return 0;
+		}
+	return 0;
+	}
